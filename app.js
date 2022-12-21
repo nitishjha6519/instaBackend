@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const multer = require("multer");
 const mongoose=require("mongoose")
 const postsModel= require("./schema")
-const cors = require('cors');
+// const cors = require('cors');
 //buffer data of multer to string
 const DatauriParser=require("datauri/parser"); //for multer memoryStorage()
 const parser = new DatauriParser();
@@ -18,16 +18,24 @@ process.on('uncaughtException', function(err) {
   console.log('Caught exception: ' + err);
 });
 
-const corsOptions = {
-    origin: 'https://vne4jb.csb.app',
-    credentials: true,            //access-control-allow-credentials:true
-    optionSuccessStatus: 200
-}
+// const corsOptions = {
+//     origin: 'https://vne4jb.csb.app',
+//     credentials: true,            //access-control-allow-credentials:true
+//     optionSuccessStatus: 200
+// }
 const app = express();
+// enable CORS without external module
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }));
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+
 
 
 
