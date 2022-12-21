@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const multer = require("multer");
 const mongoose=require("mongoose")
-const postsModel= require("./model/schema")
+const postsModel= require("./schema")
 const cors = require('cors');
 //buffer data of multer to string
 const DatauriParser=require("datauri/parser"); //for multer memoryStorage()
