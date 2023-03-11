@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "4d1a75d1-b533-4e99-9885-fd74f95e108c",
+		"name": "insta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24748443"
+	},
+	"item": [
+		{
+			"name": "new post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sample",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "mumbai",
+							"type": "text"
+						},
+						{
+							"key": "likes",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "okkkkkkkkkkkkkkk",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Nitish/Pictures/Screenshots/diagonal.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.01:5000/newpost",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"01"
+					],
+					"port": "5000",
+					"path": [
+						"newpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.01:5000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"01"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
